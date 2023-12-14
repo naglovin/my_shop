@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Удаление товара</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Удалить товар</h1>
+    <form method="post">
+        <input type="text" class="form-control" name="title" id="title" placeholder="Введите название">
+        <input type="number" class="form-control" name="price" id="price" placeholder="Введите цену">
+        <input type="text" class="form-control" name="description" id="description" placeholder="Описание товара">
+<!--        <input type="checkbox" name="availability" value="Наличие"> Товар в наличии <br>-->
+        <input type="text" class="form-control" name="availability" id="availability" placeholder="Установите наличие товара">
+        <button class="btn btn-success" type="submit">Добавить товар</button>
+    </form>
+</div>
+{% endblock %}

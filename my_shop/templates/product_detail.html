@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+     <h1>{{ product.title }}</h1>
+
+    <div class="alert alert-info">
+        <p>{{ product.price }}</p>
+        <p>{{ product.description }}</p>
+        <p><b>{{ product.availability }}</b></p>
+        <a href="/products/{{ product.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/products/{{ product.id }}/update" class="btn btn-success">Изменить</a>
+    </div>
+</div>
+{% endblock %}

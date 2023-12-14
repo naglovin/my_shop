@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Все товары</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+     <h1>Все товары на сайте</h1>
+
+    {% if products|length > 0 %}
+        {% for el in products %}
+        <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.price }}</p>
+            <p><b>{{ el.availability }}</b></p>
+            <a href="/products/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Нет ни одного товара в магазине</p>
+    {% endif%}
+</div>
+{% endblock %}
